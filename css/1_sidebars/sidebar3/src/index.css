@@ -1,0 +1,180 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.home, .reports, .products{
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+/* Form */
+.box{
+  width: 30%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #191919;
+  text-align: center;
+  border-radius: 10px;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type= "text"],  .box input[type = "number"]{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 90%;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type= "text"]:focus,  .box input[type = "number"]:focus{
+  width: 100%;
+  border-color: #2ecc71;
+}
+.box input[type = "submit"]{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.5s;
+  cursor: pointer;
+  width: 90%;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+  width: 100%;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.content-customer{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+
+}
+.card{
+  color: #fff;
+  margin: 10px;
+  /* position: relative; */
+  width: 250px;
+  height: 450px;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card .content-card{
+  /* position: relative; */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1; 
+}
+.card .content-card .delete{
+  position: relative;
+  top: 75px;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #fff;
+  text-decoration: none;
+  background: #2196f3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.card:hover .content-card .delete{
+  /* background: red; */
+  top: 0;
+  opacity: 1;
+}
+.card .content-card .delete:hover{
+  background: red;
+}
+
+/* Modal */
+.overlay{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.content-modal{
+  width: 500px;
+  min-height: 800px;
+  background: #fff;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  transition: 2s ease all;
+}
+.header-modal{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e8e8e8;
+}
+.header-modal h1{
+  font-weight: 500;
+  font-size: 32px;
+  color: #1766dc;
+}
+.btn-close-modal{
+  position: absolute;
+  font-size: 20px;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: .3s ease all;
+  border-radius: 3px;
+  color: #1766dc;
+}
+.btn-close-modal:hover{
+  background: #f2f2f2;
+}
